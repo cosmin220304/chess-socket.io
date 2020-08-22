@@ -1,0 +1,105 @@
+body {
+  margin: 0px;
+}
+
+@mixin center {
+  display: grid;
+  place-items: center;
+}
+
+body > * {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+nav {
+  width: 100%;
+  height: 38px;
+  background-color: #0b98de;
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.login {
+  @include center;
+  margin-top: 5rem;
+
+  > * {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: #0bde63;
+    border-radius: 1rem;
+    color: white;
+    padding: 1rem 2rem;
+  }
+}
+
+.rooms {
+  @include center;
+
+  font-size: 2rem;
+  margin-top: 5rem;
+
+  > * {
+    margin-top: 1rem;
+  }
+
+  button { 
+    cursor: pointer;
+    background-color: #222222;
+    color: white;
+  }  
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.centerChild {
+  @include center;
+}
+
+.board {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  border: 2px solid black;
+  margin-top: 5rem;
+}
+
+.square {
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+}
+
+.blackOutline {
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.whiteOutline {
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.selectOutline {
+  text-shadow:
+    -2px -2px 0 rgb(255, 230, 0),
+    2px -2px 0 rgb(255, 230, 0),
+    -2px 2px 0 rgb(255, 230, 0),
+    2px 2px 0 rgb(255, 230, 0);
+}
